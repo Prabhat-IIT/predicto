@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    app:cardUseCompatPadding="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/text_margin"
+    android:orientation="vertical"
+    android:layout_height="@dimen/grid_item_dimen"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ImageView
+    android:adjustViewBounds="true"
+    android:id="@+id/grid_object_image"
+    android:layout_margin="@dimen/fab_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="fitXY"
+    />
+<TextView
+    android:textStyle="bold"
+    android:textSize="@dimen/text_margin"
+    android:id="@+id/grid_object_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:gravity="center"
+    />
+</android.support.v7.widget.CardView>
