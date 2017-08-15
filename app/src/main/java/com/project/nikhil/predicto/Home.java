@@ -7,11 +7,11 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.viewpagerindicator.CirclePageIndicator;
-
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import me.relex.circleindicator.CircleIndicator;
 
 public class Home extends AppCompatActivity {
 
@@ -34,20 +34,16 @@ public class Home extends AppCompatActivity {
         init();
 
 
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan"));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan"));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan"));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan"));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan"));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan"));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan"));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan"));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan"));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan"));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan"));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan"));
-
-
+        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
+        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
+        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
+        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
+        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
+        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
+        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
+        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
+        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
+        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
 
         set_grid_item(test);
 
@@ -60,7 +56,7 @@ public class Home extends AppCompatActivity {
         gridLayoutManager = new GridLayoutManager(Home.this,3);
         grids.setHasFixedSize(true);
         grids.setLayoutManager(gridLayoutManager);
-        adapter_grid items=new adapter_grid(test);
+        adapter_grid items=new adapter_grid(test,this);
         grids.setAdapter(items);
 
 
@@ -75,9 +71,7 @@ public class Home extends AppCompatActivity {
         final ViewPager viewPager=(ViewPager)findViewById(R.id.view_pager);
     viewPager.setAdapter(new adapter_slider(Home.this,rajansthanArray));
 
-    CirclePageIndicator indicator=(CirclePageIndicator)findViewById(R.id.circle_indicator);
-        indicator.setFillColor(R.color.colorPrimary);
-        indicator.setPageColor(R.color.colorAccent);
+       CircleIndicator indicator=(CircleIndicator)findViewById(R.id.circle_indicator);
         indicator.setViewPager(viewPager);
         final Handler handler = new Handler();
         final Runnable Update = new Runnable() {

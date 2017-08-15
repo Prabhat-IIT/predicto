@@ -1,6 +1,7 @@
 package com.project.nikhil.predicto;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -20,10 +21,11 @@ import java.util.ArrayList;
 public class adapter_grid extends RecyclerView.Adapter<adapter_grid.ViewHolder> {
     public ArrayList<grid_object> mdatas;
     ViewGroup x;
-    Context context;
+    Context context,activity;
 
-    public adapter_grid(ArrayList<grid_object> myDataset) {
+    public adapter_grid(ArrayList<grid_object> myDataset,Context cxt) {
         mdatas = myDataset;
+        activity=cxt;
     }
     @Override
     public adapter_grid.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -42,7 +44,8 @@ public class adapter_grid extends RecyclerView.Adapter<adapter_grid.ViewHolder> 
         holder.setOnItemClickListener(new MyClickListener() {
             @Override
             public void onItemClick(int position, View v) {
-           Log.e("check","working");
+                Intent i=new Intent(activity,o1.getAclass());
+                activity.startActivity(i);
            }
         });
     }

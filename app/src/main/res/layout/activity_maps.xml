@@ -1,0 +1,29 @@
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.project.nikhil.predicto.MapsActivity"
+     android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+<fragment android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    />
+  <TextView
+      android:layout_alignParentTop="true"
+      android:layout_width="match_parent"
+      android:layout_height="24dp"
+      android:text="Click to choose location"
+      android:background="@color/colorPrimary"/>
+
+  <Button
+      android:id="@+id/map_proceed"
+      android:layout_alignParentBottom="true"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:background="@color/colorPrimary"
+      android:text="Proceed"/>
+</RelativeLayout>
