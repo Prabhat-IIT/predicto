@@ -12,12 +12,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     />
-  <TextView
-      android:layout_alignParentTop="true"
-      android:layout_width="match_parent"
-      android:layout_height="24dp"
-      android:text="Click to choose location"
-      android:background="@color/colorPrimary"/>
 
   <Button
       android:id="@+id/map_proceed"

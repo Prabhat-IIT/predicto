@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.nikhil.predicto.crop_predictor_input">
+<Spinner
+    android:id="@+id/soil_spinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<Spinner
+    android:id="@+id/state_spinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+</Spinner>
+<Spinner
+    android:id="@+id/season_spinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+</Spinner>
+<EditText
+    android:text="Production per unit area"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/p_r"/>
+<EditText
+    android:text="Ph level of soil"
+    android:id="@+id/ph"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    />
+
+ <Button
+     android:id="@+id/submit"
+     android:text="submit"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content" />
+
+</Spinner>
+</LinearLayout>

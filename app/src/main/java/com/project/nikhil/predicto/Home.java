@@ -1,5 +1,9 @@
 package com.project.nikhil.predicto;
 
+import android.content.Context;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -13,8 +17,12 @@ import java.util.TimerTask;
 
 import me.relex.circleindicator.CircleIndicator;
 
-public class Home extends AppCompatActivity {
-
+public class Home extends AppCompatActivity{
+    LocationManager locationManager;
+    cordinates cordinates;
+    String lat;
+    String provider;
+    protected String latitude,longitude;
     private RecyclerView grids;
     private static int currentPage = 0;
     private static final Integer[] rajasthan=
@@ -31,19 +39,14 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         init();
 
+        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Crop Predictor","फसल की भविष्यवाणी",MapsActivity.class));
+        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Weather Predictor","मौसम की भविष्यवाणी",MapsActivity_weather.class));
+        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Talk to Bheem ","भीम से बात करो",speech_recognizer.class,cordinates));
+        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Market Price","मंडी दर",Crop_predictor.class));
 
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
-        test.add(new grid_object(R.drawable.rajasthan_gov_logo,"Rajasthan",Crop_predictor.class));
 
         set_grid_item(test);
 
@@ -53,7 +56,7 @@ public class Home extends AppCompatActivity {
     private void set_grid_item(ArrayList<grid_object> test) {
         grids=(RecyclerView)findViewById(R.id.home_grid);
         final GridLayoutManager gridLayoutManager;
-        gridLayoutManager = new GridLayoutManager(Home.this,3);
+        gridLayoutManager = new GridLayoutManager(Home.this,2);
         grids.setHasFixedSize(true);
         grids.setLayoutManager(gridLayoutManager);
         adapter_grid items=new adapter_grid(test,this);
@@ -92,4 +95,6 @@ public class Home extends AppCompatActivity {
 
 
     }
+
+
 }

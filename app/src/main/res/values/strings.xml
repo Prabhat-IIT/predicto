@@ -1,4 +1,55 @@
 <resources>
     <string name="app_name">"Predicto "</string>
     <string name="title_activity_maps">Map</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="speech_prompt">Say something&#8230;</string>
+    <string name="speech_not_supported">Sorry! Your device doesn\'t support speech input</string>
+    <string name="tap_on_mic">Tap on mic to speak</string>
+    <string name="title_activity_maps_weather">Map</string>
+    <string name="title_activity_maps_speech">Map</string>
+    <string-array name="soil_names"><item>Alluvial soils</item><item>Black soils</item><item>Desert soils</item><item>Glaciers</item><item>Grey and Brown soils</item><item>Laterite soils</item><item>Mixed Red and Black soils</item><item>Mountain soils</item><item>Red and Yellow soils</item><item>Red Loamy soils</item><item>Red sandy soils</item><item>Skelletal soils</item><item>Sub Mountain soils</item><item>Teral soils </item></string-array>
+    <string-array name="states_name">
+        <item>andhra pradesh</item>
+        <item>arunachal pradesh</item>
+        <item>assam</item>
+        <item>bihar</item>
+        <item>chattishgarh</item>
+        <item>goa</item>
+        <item>gujrat</item>
+        <item>haryana</item>
+        <item>himachal pradesh</item>
+        <item>jammu and kashmir</item>
+        <item>jharkhand</item>
+        <item>karnatak</item>
+        <item>kerela</item>
+        <item>madhya pradesh</item>
+        <item>maharashtra</item>
+        <item>manipur</item>
+        <item>meghlaya</item>
+        <item>mizoram</item>
+        <item>nagaland</item>
+        <item>odisha</item>
+        <item>punjab</item>
+        <item>rajasthan</item>
+        <item>sikkim</item>
+        <item>tamil nadu</item>
+        <item>telangana</item>
+        <item>tripura</item>
+        <item>uttarakhand</item>
+        <item>uttar pradesh</item>
+        <item>west bengal</item>
+        <item>andaman and nicobar</item>\
+        <item>chandigarh</item>
+        <item>dadra and nagar haveli</item>
+        <item>puducherry</item>
+    </string-array>
+    <string-array name="season_name">
+        <item>Whole Year</item>
+        <item>Winter</item>
+        <item>Summer</item>
+        <item>Rabi</item>
+        <item>Kharif</item>
+        <item>Autumn</item>
+    </string-array>
 </resources>

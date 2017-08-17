@@ -7,5 +7,5 @@
     <dimen name="text_size">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="list_item_dimen">110dp</dimen>
-    <dimen name="grid_item_dimen">110dp</dimen>
+    <dimen name="grid_item_dimen">180dp</dimen>
 </resources>

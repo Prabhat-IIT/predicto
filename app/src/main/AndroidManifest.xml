@@ -8,6 +8,8 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -18,8 +20,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Home"
-            android:screenOrientation="userPortrait">
-        </activity>
+            android:screenOrientation="userPortrait" />
         <activity android:name=".Crop_predictor" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -35,14 +36,23 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".speech_recognizer" />
+        <activity android:name=".Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".weather_predictor" />
+        <activity
+            android:name=".MapsActivity_weather"
+            android:label="@string/title_activity_maps_weather" />
+        <activity
+            android:name=".MapsActivity_speech"
+            android:label="@string/title_activity_maps_speech" />
+        <activity android:name=".crop_predictor_input"></activity>
     </application>
 
 </manifest>
